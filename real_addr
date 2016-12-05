@@ -1,0 +1,271 @@
+void real_addr(int frame,int pid,int page)
+{
+	int temp;
+	int i = 1;
+	temp = input_process[pid].input_array[0].pid;
+	
+	while(input_process[pid].input_array[i].pid == temp)
+	{
+			
+	}
+}
+
+
+void virtual_addr(int frame,char addr[])
+{
+	int i;
+	char bin_addr[16];
+
+	switch(frame)
+	{
+		case 0:
+			  strcpy(bin_addr,"000000");	
+			  break;
+		case 1:
+			  strcpy(bin_addr,"000001");	
+			  break;
+		
+		case 2:
+			  strcpy(bin_addr,"000010");	
+			  break;
+		case 3:
+			  strcpy(bin_addr,"000011");	
+			  break;
+		
+		case 4:
+			  strcpy(bin_addr,"000100");	
+			  break;
+		case 5:
+			  strcpy(bin_addr,"000101");	
+			  break;
+		case 6:
+			  strcpy(bin_addr,"000110");	
+			  break;
+		case 7:
+			  strcpy(bin_addr,"000111");	
+			  break;
+		case 8:
+			  strcpy(bin_addr,"001000");	
+			  break;
+		case 9:
+			  strcpy(bin_addr,"001001");	
+			  break;
+		case 10:
+			  strcpy(bin_addr,"001010");	
+			  break;
+		case 11:
+			  strcpy(bin_addr,"001011");	
+			  break;
+		case 12:
+			  strcpy(bin_addr,"001100");	
+			  break;
+		case 13:
+			  strcpy(bin_addr,"001101");	
+			  break;
+		case 14:
+			  strcpy(bin_addr,"001110");	
+			  break;
+		case 15:
+			  strcpy(bin_addr,"001111");	
+			  break;
+		case 16:
+			  strcpy(bin_addr,"010000");	
+			  break;
+	}
+	
+	for(i=1;i<4;i++)				
+	{
+		switch(addr[i])	
+		{
+			case '0':
+				if(i == 1)
+					strcat(bin_addr,"00");	
+				
+				if(i == 2)
+					strcat(bin_addr,"0000");
+
+				if(i == 3)
+					strcat(bin_addr,"0000");
+	
+				break;
+			
+			case '1':
+				if(i == 1)
+					strcat(bin_addr,"01");	
+				
+				if(i == 2)
+					strcat(bin_addr,"0001");
+
+				if(i == 3)
+					strcat(bin_addr,"0001");
+				
+				break;
+			
+			case '2':
+				if(i == 1)
+					strcat(bin_addr,"10");	
+				
+				if(i == 2)
+					strcat(bin_addr,"0010");
+				
+				if(i == 3)
+					strcat(bin_addr,"0010");
+				break;
+
+			case '3':
+				if(i == 1)
+					strcat(bin_addr,"11");	
+				
+				if(i == 2)
+					strcat(bin_addr,"0011");
+				
+				if(i == 3)
+					strcat(bin_addr,"0011");
+				break;
+			
+			case '4':
+				if(i == 1)
+					strcat(bin_addr,"00");	
+				
+				if(i == 2)
+					strcat(bin_addr,"0100");
+				
+				if(i == 3)
+					strcat(bin_addr,"0100");
+				break;
+			
+			case '5':
+				if(i == 1)
+					strcat(bin_addr,"01");	
+				
+				if(i == 2)
+					strcat(bin_addr,"0101");
+
+				if(i == 3)
+					strcat(bin_addr,"0101");
+				break;
+			
+			case '6':
+				if(i == 1)
+					strcat(bin_addr,"10");	
+				
+				if(i == 2)
+					strcat(bin_addr,"0110");
+				
+				if(i == 3)
+					strcat(bin_addr,"0110");
+				break;
+			
+			case '7':
+				if(i == 1)
+					strcat(bin_addr,"11");	
+				
+				if(i == 2)
+					strcat(bin_addr,"0111");
+				
+				if(i == 3)
+					strcat(bin_addr,"0111");
+				break;
+			
+			case '8':
+				if(i == 1)
+					strcat(bin_addr,"00");	
+				
+				if(i == 2)
+					strcat(bin_addr,"1000");
+
+				if(i == 3)
+					strcat(bin_addr,"1000");
+				break;
+			
+			case '9':
+				if(i == 1)
+					strcat(bin_addr,"01");	
+				
+				if(i == 2)
+					strcat(bin_addr,"1001");
+				
+				if(i == 3)
+					strcat(bin_addr,"1001");
+				break;
+			
+			case 'A':
+				if(i == 1)
+					strcat(bin_addr,"10");	
+				
+				if(i == 2)
+					strcat(bin_addr,"1010");
+
+				if(i == 3)
+					strcat(bin_addr,"1010");
+				
+				break;
+		
+			case 'B':
+				if(i == 1)
+					strcat(bin_addr,"11");	
+				
+				if(i == 2)
+					strcat(bin_addr,"1011");
+				
+				if(i == 3)
+					strcat(bin_addr,"1011");
+				break;
+			
+			case 'C':
+				if(i == 1)
+					strcat(bin_addr,"00");	
+				
+				if(i == 2)
+					strcat(bin_addr,"1100");
+
+				if(i == 3)
+					strcat(bin_addr,"1100");
+				break;
+			
+			case 'D':
+				if(i == 1)
+					strcat(bin_addr,"01");	
+				
+				if(i == 2)
+					strcat(bin_addr,"1101");
+
+				if(i == 3)
+					strcat(bin_addr,"1101");
+				break;
+			
+			case 'E':
+				if(i == 1)
+					strcat(bin_addr,"10");	
+				
+				if(i == 2)
+					strcat(bin_addr,"1110");
+				
+				if(i == 3)
+					strcat(bin_addr,"1110");
+				break;		
+			
+			case 'F':
+				if(i == 1)
+					strcat(bin_addr,"11");	
+				
+				if(i == 2)
+					strcat(bin_addr,"1111");
+
+				if(i == 3)
+					strcat(bin_addr,"1111");
+				break;
+		}
+	}	
+		
+	/*printf("Virtual address = ");	
+
+	for(i=0;i<16;i++)
+	{
+		printf("%c",bin_addr[i]);			
+	}
+		printf("\n\n");*/
+	
+}
+
+
